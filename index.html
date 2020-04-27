@@ -96,19 +96,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>在new一篇文章的时候，出现了EACCES: permission denied的错误，意思是没有权限，百度之后给出的解决办法是用以下命令修改文件所有权</code></pre>{% codeblock -R %}
-#-R迭代的意思，这能使路径下所有文件及子目录的所有权都被更改；第一个username是用户名，第二个username是组名
-sudo chown -R <username><:username> 路径
-{% endcodeblock %}
+        <p>在new一篇文章的时候，出现了EACCES: permission denied的错误，意思是没有权限，百度之后给出的解决办法是用以下命令修改文件所有权</p>
+<figure class="highlight plain"><figcaption><span>R</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#-R迭代的意思，这能使路径下所有文件及子目录的所有权都被更改；第一个username是用户名，第二个username是组名</span><br><span class="line">sudo chown -R &lt;username&gt;&lt;:username&gt; 路径</span><br></pre></td></tr></table></figure>
 
-<pre><code>查到的解决方法一般是在安装npm时就出现的，ubuntu上使用npm命令全局安装的包所在路径通常为</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;local&#x2F;lib&#x2F;node_modules</span><br></pre></td></tr></table></figure>
+<p>查到的解决方法一般是在安装npm时就出现的，ubuntu上使用npm命令全局安装的包所在路径通常为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/lib/node_modules</span><br></pre></td></tr></table></figure>
 
-<pre><code>一般用apt命令安装，就默认会在当前用户的这个目录下。如果在root下安装了npm，那它的权限就是root的，用普通用户执行通过npm下载的hexo命令时，就会出现权限不足。而我并不是这个原因，我是项目目录blog的权限出错了，用ll命令查看当前目录下文件和子目录的所有者，解决方法是一样的。</code></pre><p>PS:     我给这个文章的分类是stupid，这事实上是一个很愚蠢的错误，当然这在非Unix用户刚开始接触时是正常的。<br>    在用Unix系统时，无论何时必须要注意当前的权限。<br>    还有一个容易出现问题这里顺便说下，就是关于换源，apt，pip，npm等等，对于一个包管理工具，在安装以后，就对它换源<br>    另外我在使用npm的时候，出现了npm无法与nodejs匹配的问题，我不知道这是不是源的问题，我使用的是清华的镜像源</p>
-<pre><code>主要参考的是百度得到的连接，这里就不贴了</code></pre>
+
+<p>一般用apt命令安装，就默认会在当前用户的这个目录下。如果在root下安装了npm，那它的权限就是root的，用普通用户执行通过npm<br>下载的hexo命令时，就会出现权限不足。而我并不是这个原因，我是项目目录blog的权限出错了，用ll命令查看当前目录下文件和子目录的所<br>有者，解决方法是一样的。<br>PS:     我给这个文章的分类是stupid，这事实上是一个很愚蠢的错误，当然这在非Unix用户刚开始接触时是正常的。<br>        在用Unix系统时，无论何时必须要注意当前的权限。<br>    还有一个容易出现问题这里顺便说下，就是关于换源，apt，pip，npm等等，对于一个包管理工具，在安装以后，就对它换源<br>    另外我在使用npm的时候，出现了npm无法与nodejs匹配的问题，我不知道这是不是源的问题，我使用的是清华的镜像源<br>    主要参考的是百度得到的连接，这里就不贴了</p>
+<hr>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/26/2020042601/" data-id="ck9hw6ay400003t4i4xsz3hx8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/26/2020042601/" data-id="ck9hxbpzw0000nc4iezd00781" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/error/" rel="tag">error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a></li></ul>
@@ -157,7 +158,7 @@ sudo chown -R <username><:username> 路径
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/30/test/" data-id="ck9hw6ayf00043t4ig3zo9339" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/30/test/" data-id="ck9hxbq0b0004nc4ihyrt6onb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -206,7 +207,7 @@ sudo chown -R <username><:username> 路径
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/28/hello-world/" data-id="ck9hw6ayb00013t4i10hl1op2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/28/hello-world/" data-id="ck9hxbq070001nc4ieifsc4g2" class="article-share-link">Share</a>
       
       
     </footer>
